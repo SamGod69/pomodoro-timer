@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jersey 10', serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+#navbar{
+    width: 100%;
+    color: white;
+    background-color: #313131;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+#timer{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#display{
+    width: 25rem;
+    height: 25rem;
+    border: 0.7rem solid black;
+    border-radius: 50%;
+    font-size: 8rem;
+    margin-top: 2.5rem;
+    transition: background-color 1s ease-in-out;
+}
+#settings{
+    width: 23.6rem;
+    height: 23.6rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#bottom{
+    position: absolute;
+    bottom: 2rem;
+}
+#container{
+    position: relative;
+    bottom: 0;
+}
+#btn{
+    padding: 0.5rem 4rem;
+    width: 14rem;
+    font-size: 3rem;
+    color: white;
+    background-color: #201C1C;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+}
+#btn:hover{
+    cursor: pointer;
+}
+
+#settingsBtn{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: -3.4375rem;
+    z-index: 2;
+}
+#settingsBtn:hover{
+    cursor: pointer;
+}
+#settingsBtn img{
+    width: 3.125rem;
+}
+
+#resetBtn{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: -2.9375rem;
+    z-index: 2;
+}
+#resetBtn img{
+    width: 2.5rem;
+}
+#resetBtn:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+#textSettings{
+    color: white;
+    font-size: 2.5rem;
+    background-color: rgb(21, 21, 21);
+    width: 10rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 0.9375rem;
+}
+.text{
+    font-size: 2rem;
+}
+.text:hover{
+    cursor: default;
+}
+.timeSelector{
+    font-size: 2rem;
+    width: 4rem;
+    padding: 0 0.125rem;
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
+}
+#saveBtn{
+    font-size: 2rem;
+    color: white;
+    background-color: #151414;
+    border: none;
+    border-radius: 0.4375rem;
+    margin-top: 1.5rem;
+    padding: 0.4375rem 1.25rem;
+    transition: background-color 0.2s ease;
+    transition: color 0.1s linear;
+}
+#saveBtn:hover{
+    cursor: pointer;
+    background-color: rgb(10, 9, 9);
+}
+#saveBtn:active{
+    color: rgb(173, 173, 173);
+}
