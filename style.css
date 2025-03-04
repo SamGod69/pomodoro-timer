@@ -11,55 +11,107 @@ body{
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #navbar{
     width: 100%;
     color: white;
     background-color: #313131;
-    height: 7rem;
+    height: 13vh;
+    max-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-}
-#timer{
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    position: absolute;
+    top: 0;
 }
 #display{
-    width: 25rem;
-    height: 25rem;
+    width: 65vh;
+    height: 65vh;
+    min-width: 460px;
+    min-height: 460px;
+    max-width: 600px;
+    max-height: 600px;
     border: 0.7rem solid black;
     border-radius: 50%;
-    font-size: 8rem;
-    margin-top: 2.5rem;
+    font-size: 11rem;
     transition: background-color 1s ease-in-out;
 }
 #settings{
-    width: 23.6rem;
-    height: 23.6rem;
-    border: none;
+    width: 70vh;
+    height: 70vh;
+    min-width: 460px;
+    min-height: 460px;
+    max-width: 650px;
+    max-height: 650px;
+    border: 0.7rem solid black;
     border-radius: 50%;
     background-color: #D9D9D9;
     position: absolute;
-    top: 15rem;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.hidden{
+    display: none !important;
+}
+#textSettings{
+    color: white;
+    font-size: 3.5rem;
+    background-color: rgb(21, 21, 21);
+    width: 45%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.9375rem;
+    position: absolute;
+    top: 15%;
+}
+.text{
+    font-size: 3rem;
+}
+.text:hover{
+    cursor: default;
+}
+.timeSelector{
+    font-size: 2rem;
+    width: 4rem;
+    padding: 0 0.125rem;
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
+}
+#saveBtn{
+    font-size: 2.5rem;
+    color: white;
+    background-color: #151414;
+    border: none;
+    border-radius: 0.4375rem;
+    margin-top: 1.5rem;
+    width: 20%;
+    height: 10%;
+    position: absolute;
+    bottom: 15%;
+    transition: background-color 0.2s ease;
+    transition: color 0.1s linear;
+}
+#saveBtn:hover{
+    cursor: pointer;
+    background-color: rgb(10, 9, 9);
+}
+#saveBtn:active{
+    color: rgb(173, 173, 173);
+}
+
 #bottom{
     position: absolute;
-    bottom: 2rem;
-}
-#container{
-    position: relative;
-    bottom: 0;
+    bottom: 3vh;
 }
 #btn{
     padding: 0.5rem 4rem;
@@ -107,50 +159,93 @@ body{
     cursor: pointer;
 }
 
-.hidden{
-    display: none !important;
+
+@media(max-width: 715px){
+    #display{
+        width: 425px;
+        height: 425px;
+        min-width: 0px;
+        min-height: 0px;
+        font-size: 10rem;
+    }
+    #settings{
+        width: 425px;
+        height: 425px;
+        min-width: 0px;
+        min-height: 0px;
+    }
+    #textSettings{
+        font-size: 3rem;
+    }
+    .text{
+        font-size: 2rem;
+    }
+    .timeSelector{
+        font-size: 2rem;
+        width: 3rem;
+    }
+    #saveBtn{
+        font-size: 2rem;
+    }
 }
-#textSettings{
-    color: white;
-    font-size: 2.5rem;
-    background-color: rgb(21, 21, 21);
-    width: 10rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    border-radius: 0.9375rem;
+
+@media(max-width: 510px){
+    #navbar{
+        font-size: 2.5rem;
+    }
+    #display{
+        width: 370px;
+        height: 370px;
+        font-size: 9rem;
+    }
+    #settings{
+        width: 370px;
+        height: 370px;
+    }
+    #textSettings{
+        font-size: 2.5rem;
+    }
+    .text{
+        font-size: 1.5rem;
+    }
+    .timeSelector{
+        font-size: 1.5rem;
+        width: 2.5rem;
+    }
+    #saveBtn{
+        font-size: 2rem;
+    }
 }
-.text{
-    font-size: 2rem;
+@media(max-width: 410px){
+    #navbar{
+        font-size: 2rem;
+    }
+    #display{
+        width: 300px;
+        height: 300px;
+        font-size: 7.5rem;
+    }
+    #settings{
+        width: 300px;
+        height: 300px;
+    }
+    #textSettings{
+        font-size: 2rem;
+    }
+    .text{
+        font-size: 1.5rem;
+    }
+    .timeSelector{
+        font-size: 1.5rem;
+        width: 2.5rem;
+    }
+    #saveBtn{
+        font-size: 1.5rem;
+    }
 }
-.text:hover{
-    cursor: default;
-}
-.timeSelector{
-    font-size: 2rem;
-    width: 4rem;
-    padding: 0 0.125rem;
-    border: 0.125rem solid black;
-    border-radius: 0.25rem;
-}
-#saveBtn{
-    font-size: 2rem;
-    color: white;
-    background-color: #151414;
-    border: none;
-    border-radius: 0.4375rem;
-    margin-top: 1.5rem;
-    padding: 0.4375rem 1.25rem;
-    transition: background-color 0.2s ease;
-    transition: color 0.1s linear;
-}
-#saveBtn:hover{
-    cursor: pointer;
-    background-color: rgb(10, 9, 9);
-}
-#saveBtn:active{
-    color: rgb(173, 173, 173);
+
+@media(min-height: 925px){
+    #navbar{
+        max-height: 140px;
+    }
 }

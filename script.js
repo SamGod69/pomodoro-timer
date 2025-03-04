@@ -125,6 +125,7 @@ function updateSettings(){
     display.textContent = `${m}:00`;
 
     display.style.backgroundColor = 'white';
+    closeSettings();
 }
 
 // Exit settings if the user presses Escape

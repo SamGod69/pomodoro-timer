@@ -11,24 +11,22 @@
     <nav id="navbar">
         <h1>Pomodoro Timer</h1>
     </nav>
-    <section id="timer">
-        <button id="display">25:00</button>
-        <div id="bottom">
-            <div id="container">
-                <button id="settingsBtn" onclick="openSettings()"><img src="images/settings.svg" alt="settings img"></button>
-                <button id="btn" onclick="startTimer()">Start</button>
-                <button id="resetBtn" onclick="resetTimer()"><img src="images/reset.svg" alt="resetImg"></button>
-            </div>
+    <button id="display">25:00</button>
+    <div id="bottom">
+        <div id="container">
+            <button id="settingsBtn" onclick="openSettings()"><img src="images/settings.svg" alt="settings img"></button>
+            <button id="btn" onclick="startTimer()">Start</button>
+            <button id="resetBtn" onclick="resetTimer()"><img src="images/reset.svg" alt="resetImg"></button>
         </div>
-        <div id="settings" class="hidden">
-            <p id="textSettings">Settings</p>
-            <p class="text">Timer</p>
-            <input type="number" class="timeSelector" id="timerDuration" value="25" min="1">
-            <p class="text">Short Break</p>
-            <input type="number" class="timeSelector" id="shortBreakDuration" value="5" min="1">
-            <button id="saveBtn" onclick="updateSettings()">Save</button>
-        </div>
-    </section>
+    </div>
+    <div id="settings" class="hidden">
+        <p id="textSettings">Settings</p>
+        <p class="text">Timer</p>
+        <input type="number" class="timeSelector" id="timerDuration" value="25" min="1">
+        <p class="text">Short Break</p>
+        <input type="number" class="timeSelector" id="shortBreakDuration" value="5" min="1">
+        <button id="saveBtn" onclick="updateSettings()">Save</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
